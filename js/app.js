@@ -1,8 +1,17 @@
 
 function Promitquestion() {
+f1();
+f2();
+f3();
+f4();
+f5();
+f6();
+f7();
+}
+        
+var user1 = [];
 
-
-        var user1 = [];
+function f1(){
 
 var getName = prompt("What is your name? ");
 
@@ -15,11 +24,17 @@ while (getName == "" ){
        
    
 }
+ user1.push(getName);
 
-user1.push(getName);
+}
+
+
+//user1.push(getName);
 
 
 var flag=false;
+
+function f2(){
 var getgender = prompt("What is your gender? Write Just male or female");
 
 
@@ -39,15 +54,16 @@ if (getgender == "male" || getgender == "female")
              if (getgender == "male" || getgender == "female")
              {
                      
-                  user1.push(getgender);
-          flag=true;
+                user1.push(getgender);
+                flag=true;
               }   
 
     }
         
 }
+}
 
-
+function f3(){
 var getage = prompt("What is your age? ");
 
 while (getage <= 0 )
@@ -56,10 +72,12 @@ while (getage <= 0 )
          getage = prompt("What is your age? ");
 
 }
+user1.push(getage);
+
+}
 
 
-user1.push(getage);        
-
+function f4 (){
 
 var q1 = prompt("Did you study at university for a bachelor's degree? , Hint: ans:yes,no,y,n");
 
@@ -76,9 +94,9 @@ if (q1 == "yes" || q1 == "no"|| q1 == "n"|| q1 == "y")
 
 
     }
-
+}
         
-        
+    function f5 (){    
     var q2 = prompt("Do you like programming? , Hint: ans:yes,no,y,n");
     if (q2 == "yes" || q2 == "no"|| q2 == "n"|| q2 == "y")
    {
@@ -95,7 +113,8 @@ if (q1 == "yes" || q1 == "no"|| q1 == "n"|| q1 == "y")
 
     }
     
-             
+}
+function f6(){    
 
         var q3 = prompt("Are you comfortable in the first week of the course? , Hint: ans:yes,no,y,n");
         if (q3 == "yes" || q3 == "no"|| q3 == "n"|| q3 == "y")
@@ -113,44 +132,13 @@ if (q1 == "yes" || q1 == "no"|| q1 == "n"|| q1 == "y")
      
          }
                   
-
-
-var r=confirm("if you would to See the  welcoming message click OK                                                                                                                   if you wouldn't skip the message click Cancel ");
-if (r==true)
-  {
-  x="You pressed OK!";
-  }
- else
-  {
-  x="You pressed Cancel!";
-  }
-    
- 
- 
-  if (x =="You pressed OK!"){
-  
-if(getgender=="male"){
-        alert("Welcome Mr "+getName);
         }
-        else if(getgender=="female")
-        {
-                alert("Welcome Ms "+getName);
-
-        }
-        else if(getgender=="null")
-        {
-                alert("Welcome");
-
-        }
-        else
-        {
         
-                        alert("Welcome");
+function f7()
+{
 
+        var arrayLength = user1.length;
+        for (var i = 0; i < arrayLength; i++) {
+            console.log(user1[i]);
         }
- 
-  }
-
-  console.log(user1);
-  }
-  
+}
